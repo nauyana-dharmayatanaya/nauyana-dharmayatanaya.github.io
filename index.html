@@ -253,15 +253,6 @@ h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
 }
 .visits svg { width: 18px; height: 18px; color: var(--saffron); }
 .visits b { color: var(--forest); font-size: 1.05rem; }
-.chips { display: flex; flex-wrap: wrap; gap: 8px; }
-.chip {
-  flex: none; display: inline-flex; align-items: center; gap: 6px; font-family: var(--body); font-size: 0.9rem; font-weight: 600;
-  color: var(--fg); background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; cursor: pointer;
-}
-.chip small { font-size: 0.75rem; color: var(--muted); font-variant-numeric: tabular-nums; }
-.chip[aria-pressed="true"] { background: var(--saffron); border-color: var(--saffron); color: var(--bg); }
-.chip[aria-pressed="true"] small { color: var(--bg); opacity: .85; }
-.chip:focus-visible { outline: 2px solid var(--forest); outline-offset: 2px; }
 .contact {
   background: var(--surface); border: 1px solid var(--line); border-radius: 16px;
   padding: 22px 20px; display: flex; flex-direction: column; gap: 16px;
@@ -466,7 +457,6 @@ footer { text-align: center; color: var(--muted); font-size: 0.85rem; }
 
   <section class="protect view" data-view="photos" hidden>
     <h2>ඡායාරූප ගැලරිය</h2>
-    <div class="chips" aria-label="ඡායාරූප කාණ්ඩ"><button class="chip" type="button" data-cat="all" aria-pressed="true"><span>සියල්ල</span> <small>86</small></button><button class="chip" type="button" data-cat="stupa" aria-pressed="false"><span>චෛත්‍යය</span> <small>11</small></button><button class="chip" type="button" data-cat="bodhi" aria-pressed="false"><span>බෝධිය සහ පිළිම</span> <small>16</small></button><button class="chip" type="button" data-cat="events" aria-pressed="false"><span>පිංකම් සහ උත්සව</span> <small>14</small></button><button class="chip" type="button" data-cat="alms" aria-pressed="false"><span>පිණ්ඩපාතය</span> <small>5</small></button><button class="chip" type="button" data-cat="build" aria-pressed="false"><span>ඉදිකිරීම් සහ ධාතු නිධන්</span> <small>15</small></button><button class="chip" type="button" data-cat="library" aria-pressed="false"><span>පුස්තකාලය</span> <small>4</small></button><button class="chip" type="button" data-cat="nature" aria-pressed="false"><span>පරිසරය</span> <small>21</small></button></div>
     <div class="gallery-grid" id="gallery-grid"></div>
     <button class="more" id="gallery-more" type="button">සියලු ඡායාරූප බලන්න (86)</button>
   </section>

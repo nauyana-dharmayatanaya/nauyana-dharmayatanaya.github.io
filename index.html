@@ -618,7 +618,7 @@ window.addEventListener('load', function () {
   var el=document.getElementById('visits'), n=document.getElementById('visits-n');
   fetch('https://nauyana-dharmayatanaya.goatcounter.com/counter/TOTAL.json')
     .then(function(r){ return r.ok ? r.json() : null; })
-    .then(function(d){ if(d && d.count){ n.textContent=d.count; el.hidden=false; } })
+    .then(function(d){ var v=d && (d.count_unique||d.count); if(v){ n.textContent=v; el.hidden=false; } })
     .catch(function(){});
 })();
 </script>
